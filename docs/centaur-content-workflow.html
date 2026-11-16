@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>centaur-content-workflow.html</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+</head>
+
+<body>
+
+<h1 id="centaur-website-content-updates">CENTAUR website — Content
+updates</h1>
+<p>Repository: https://github.com/centaur-nkua/statlab</p>
+<h2 id="first-time-setup-only-once">2. First-time setup (only once)</h2>
+<ol type="1">
+<li><p>Accept the GitHub organization invitation.</p></li>
+<li><p>Install <strong>Git</strong>, <strong>Hugo Extended
+0.163.3</strong>, and a text editor (e.g. VS Code).</p></li>
+<li><p>Open a terminal and run:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone <span class="at">--recurse-submodules</span> https://github.com/centaur-nkua/statlab.git</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> statlab</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">&quot;Your Name&quot;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">&quot;your-email@example.com&quot;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">hugo</span> server</span></code></pre></div></li>
+<li><p>Open http://localhost:1313 to check the website. Press
+<strong>Ctrl+C</strong> in the terminal to stop Hugo.</p></li>
+</ol>
+<h2 id="every-time-you-update-content">3. Every time you update
+content</h2>
+<h3 id="step-1-get-the-latest-version">Step 1 — Get the latest
+version</h3>
+<p>Open a terminal in the <code>statlab</code> folder:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> switch main</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull <span class="at">--ff-only</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> submodule update <span class="at">--init</span> <span class="at">--recursive</span></span></code></pre></div>
+<h3 id="step-2-create-a-branch">Step 2 — Create a branch</h3>
+<p>Choose a short name describing your change:</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> switch <span class="at">-c</span> news/new-talk</span></code></pre></div>
+<p>Use a <strong>new branch name for every change</strong>.</p>
+<h3 id="step-3-edit-the-content">Step 3 — Edit the content</h3>
+<p>Open <code>statlab</code> in your editor. Website content is
+under:</p>
+<ul>
+<li><code>content/el/</code> — Greek</li>
+<li><code>content/en/</code> — English</li>
+</ul>
+<p>For a new announcement, <strong>copy a similar existing Markdown
+file</strong>, rename it, and update its contents. Normally update both
+languages.</p>
+<h3 id="step-4-check-locally">Step 4 — Check locally</h3>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">hugo</span> server</span></code></pre></div>
+<p>Open http://localhost:1313. Check both language versions and any
+links or PDFs. Stop Hugo with <strong>Ctrl+C</strong>.</p>
+<h3 id="step-5-save-your-changes-on-github">Step 5 — Save your changes
+on GitHub</h3>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">&quot;Add new research talk&quot;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin news/new-talk</span></code></pre></div>
+<p>Change the commit message and branch name to match your update.
+GitHub may ask you to sign in.</p>
+<h3 id="step-6-create-and-merge-a-pull-request">Step 6 — Create and
+merge a Pull Request</h3>
+<ol type="1">
+<li>Open https://github.com/centaur-nkua/statlab.</li>
+<li>Click <strong>Compare &amp; pull request</strong> for your new
+branch (or go to <strong>Pull requests → New pull
+request</strong>).</li>
+<li>Check that the destination branch is <code>main</code>, and click
+<strong>Create pull request</strong>.</li>
+<li>For routine content changes, merge once checks have passed. Ask the
+other administrator to review changes to templates, configuration, or
+deployment.</li>
+<li>Confirm that the deployment action succeeds and check the live
+CENTAUR site.</li>
+</ol>
+<h3 id="step-7-prepare-for-next-time">Step 7 — Prepare for next
+time</h3>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> switch main</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull <span class="at">--ff-only</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-d</span> news/new-talk</span></code></pre></div>
+<p>You can also delete the branch on GitHub after merging.</p>
+<h2 id="important-rules">Important rules</h2>
+<ul>
+<li><strong>Do not edit <code>main</code> directly.</strong> Use a
+branch and Pull Request.</li>
+<li><strong>Do not upload files directly to the CENTAUR server.</strong>
+Merging into <code>main</code> triggers deployment.</li>
+<li>If Git reports a conflict or an unfamiliar error, <strong>stop and
+ask</strong> rather than forcing a command.</li>
+</ul>
+
+</body>
+</html>
