@@ -25,7 +25,7 @@ scholar: "https://scholar.google.com/citations?hl=el&user=PZ7w9y4AAAAJ"
 
 orcid: "https://orcid.org/0009-0001-1321-2665"
 
-github: "https://github.com/athmath"
+github: "https://github.com/meligots"
 
 linkedin: "https://www.linkedin.com/in/loukia-meligkotsidou-26a883196/"
 
