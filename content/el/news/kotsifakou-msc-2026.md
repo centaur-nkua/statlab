@@ -8,7 +8,7 @@ news_kind: "event"
 category: "msc_presentation"
 
 date: 2026-11-24
-event_date: 2026-11-27T13:00:00
+event_date: 2026-11-27T12:00:00
 
 presenter: "Παρασκευή Κοτσιφάκου"
 affiliation: "Κατεύθυνση Στατιστικής και Επιχειρησιακής Έρευνας"
