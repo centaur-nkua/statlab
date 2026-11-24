@@ -6,10 +6,10 @@ description: "MSc thesis presentation by Paraskevi Kotsifakou"
 news_kind: "event"
 category: "msc_presentation"
 
-date: 2026-11-27
-event_date: 2026-11-23T13:00:00
+date: 2026-11-24
+event_date: 2026-11-27T13:00:00
 
-presenter: "Alexandros Tsetso"
+presenter: "Paraskevi Kotsifakou"
 affiliation: "Statistics and Operations Research track"
 
 attendance: "in_person"
