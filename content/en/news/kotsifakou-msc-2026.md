@@ -24,7 +24,7 @@ social_publish: true
 ---
 
 Ms. Paraskevi Kotsifakou, an MSc student in the Statistics and Operations Research track, will present her thesis titled
-"Structural Vector Autoregressive Models for Multivariate Time Series Data"
+"Structural Vector Autoregressive Models for Multivariate Time Series Data".
 
 ### Examination committee
 
