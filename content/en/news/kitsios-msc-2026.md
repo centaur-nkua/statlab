@@ -7,7 +7,7 @@ news_kind: "event"
 category: "msc_presentation"
 
 date: 2026-11-27
-event_date: 2026-12-4T13:30:00
+event_date: 2026-12-04T13:30:00
 
 presenter: "Konstantinos Kitsios"
 affiliation: "Statistics and Operations Research track"
