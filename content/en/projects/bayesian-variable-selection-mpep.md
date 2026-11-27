@@ -9,7 +9,7 @@ description: >-
   extend the MPEP framework to incorporate Bayesian variable selection.
 team: >-
   **Alexandros Tsetso** and **Loukia Meligkotsidou** in collaboration with
-  Andreas Markoulidakis and Heyley Jones from the University of Bristol.
+  Andreas Markoulidakis and Hayley Jones from the University of Bristol.
 status: current
 weight: 60
 research_areas:

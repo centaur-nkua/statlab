@@ -15,5 +15,5 @@ research_areas:
   - statistics
 members:
   - meligkotsidou
-  - oikonomidis
+  - goikon
 ---
